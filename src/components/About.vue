@@ -2,11 +2,11 @@
   <div class="aboutWrapper page">
     <div class="nav">
       <router-link to="/"
-        ><img class="logo" src="../assets/logo_small.png"
+        ><img class="logo" src="../assets/logo_small.png" alt="small logo" title="Back to home"
       /></router-link>
-      <router-link to="/about"
+      <!-- <router-link to="/about"
         ><img class="about" src="../assets/about.png"
-      /></router-link>
+      /></router-link> -->
     </div>
 
     <h1 class="ml12">
@@ -21,11 +21,20 @@
       <span class="letter">c</span> <span class="letter">t</span>
     </h1>
     <p class="text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, iste
-      aut. Velit sapiente deleniti voluptate repellat error. Suscipit, alias
-      error aspernatur obcaecati quas, animi magnam quo nulla voluptates
-      expedita pariatur.
+      This is a simple project, which I've done to learn how to build web applications with Vue.js.<br>
     </p>
+    <p class="text">
+      It uses several basic functionalities of this framework, and it is a modified version of app made in one of video tutorials about Vue.
+    </p>
+    <!-- <p class="text bottom">
+        2019 © AtomicCode.pl - <a href="https://www.atomiccode.pl" target="_blank">profesjonalne strony dla firm</a>
+    </p> -->
+    <a href="https://www.atomiccode.pl" target="_blank" class="link">
+        <div class="box shadow">
+            <div class="circle"></div>
+            2019 © <span>AtomicCode.pl</span> - professional websites
+        </div>
+    </a>
   </div>
 </template>
 
@@ -66,7 +75,7 @@ export default {
 <style lang="scss" scoped>
 .aboutWrapper {
   background: #f6f6f6;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -107,6 +116,91 @@ export default {
       display: inline-block;
       line-height: 1em;
     }
+  }
+
+  p.text.bottom {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    
+    a {
+      text-decoration: none;
+      color: #1e3d4a;
+      font-style: italic;
+      transition: all .5s ease;
+
+      &:hover {
+        font-size: 13px;
+      }
+    }
+  }
+
+  a.link {
+    text-decoration: none;
+    color: #1e3d4a;
+    font-size: 11px;
+    position: absolute;
+    bottom: 20px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+  
+  .box {
+    width: 100%;
+    min-width: 250px;
+    display: block;
+    height: 50px;
+    position: relative;
+    border-radius: 5px;
+    background: linear-gradient(to right, #1e3d4a 0%, #1e3d4a 100%);
+    margin-bottom: 40px;
+    padding: 18px 15px 5px 45px;
+    color: white;
+    box-shadow: 1px 2px 1px -1px #777;
+    transition: background 200ms ease-in-out;
+
+    &:hover {
+      background: linear-gradient(to right, #1e3d4a 35%, #5da4c2 100%);
+    }
+  }
+
+  .shadow {
+    position: relative;
+
+    &:before {
+      z-index: -10;
+      position: absolute;
+      content: "";
+      bottom: 20px;
+      right: 7px;
+      width: 75%;
+      top: 0;
+      box-shadow: 0 15px 10px #777;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      transition: all 150ms ease-in-out;
+
+    }
+    
+    &:hover::before {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+      bottom: 13px;
+      z-index: -1;
+    }
+  }
+  
+  .circle {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px antiquewhite;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
   }
 }
 </style>

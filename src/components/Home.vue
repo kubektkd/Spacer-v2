@@ -3,10 +3,10 @@
     <transition name="slide">
       <div class="nav" v-if="step === 1">
         <router-link to="/"
-          ><img class="logo" src="../assets/logo_small.png"
+          ><img class="logo" src="../assets/logo_small.png" alt="small logo" title="Back to home"
         /></router-link>
         <router-link to="/about" @click.native="handleLink();"
-          ><img class="about" src="../assets/about.png"
+          ><img class="about" src="../assets/about.png" alt="about" title="About project"
         /></router-link>
       </div>
     </transition>

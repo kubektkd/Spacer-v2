@@ -1,6 +1,6 @@
 <template>
   <div class="claimWrapper">
-    <img class="claim" src="../assets/logo_big.png" />
+    <img class="claim" src="../assets/logo_big.png" alt="Logo" title="SPACER"/>
     <p class="subclaim">
       Begin your journey through our amazing galaxy, and discover places you
       never even heard of.
