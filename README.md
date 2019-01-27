@@ -1,4 +1,4 @@
-# spacer-new
+# Spacer v2
 
 ## Project setup
 ```
