@@ -160,15 +160,15 @@ export default {
     color: white;
     box-shadow: 1px 2px 1px -1px #777;
     transition: background 200ms ease-in-out;
-
+    
     &:hover {
       background: linear-gradient(to right, #1e3d4a 35%, #5da4c2 100%);
     }
   }
-
+  
   .shadow {
     position: relative;
-
+    
     &:before {
       z-index: -10;
       position: absolute;
