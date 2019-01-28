@@ -111,6 +111,7 @@ export default {
     font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
+    text-align: center;
 
     .letter {
       display: inline-block;
@@ -149,13 +150,12 @@ export default {
   
   .box {
     width: 100%;
-    min-width: 250px;
+    // min-width: 250px;
     display: block;
     height: 50px;
     position: relative;
     border-radius: 5px;
     background: linear-gradient(to right, #1e3d4a 0%, #1e3d4a 100%);
-    margin-bottom: 40px;
     padding: 18px 15px 5px 45px;
     color: white;
     box-shadow: 1px 2px 1px -1px #777;
@@ -197,10 +197,26 @@ export default {
     top: 14px;
     left: 15px;
     border-radius: 50%;
-    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px antiquewhite;
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px #f6f6f6;
     width: 20px;
     height: 20px;
     display: inline-block;
+  }
+  
+  @media only screen and (max-width: 414px) {
+    .ml12 {
+      font-size: 1.5em;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .ml12 {
+      font-size: 1.2em;
+    }
+    .box {
+      width: 90%;
+      padding: 10px 15px 5px 45px;
+    }
   }
 }
 </style>
